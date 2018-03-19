@@ -1,0 +1,71 @@
+{
+    "name": "Security Quiz",
+    "logoUrl": "./img/logo.svg",
+    "logoWidth": "250px",
+    "logoHeight": "100px",
+    "description": "Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.",
+    "questions": [
+        {
+            "questionContent": "Question 1 Lorem ipsum dolor sit amet",
+            "questionImage": "http://via.placeholder.com/1000x350",
+            "questionCategory": "Phishing",
+            "questionAnswers": [
+                {
+                    "answerContent": "an answer (true)",
+                    "answerImage": "an image",
+                    "answerValue": true
+                }, {
+                    "answerContent": "an answer (false)",
+                    "answerImage": "an image",
+                    "answerValue": false
+                }, {
+                    "answerContent": "an answer (false)",
+                    "answerImage": "an image",
+                    "answerValue": false
+                }, {
+                    "answerContent": "an answer (false)",
+                    "answerImage": "an image",
+                    "answerValue": false
+                }
+            ]
+        }, {
+            "questionContent": "Question 2 Lorem ipsum dolor sit amet",
+            "questionImage": "http://via.placeholder.com/1000x350",
+            "questionCategory": "Phishing",
+            "questionAnswers": [
+                {
+                    "answerContent": "an answer",
+                    "answerImage": "an image",
+                    "answerValue": true
+                }
+            ]
+        }
+    ],
+    "lessons": [
+        {
+            "lessonTitle": "Testing Lesson 1",
+            "lessonWeight": 1,
+            "lessonSlides": [
+                {
+                    "slideContent": "Lorem ipsum dolor sit amet",
+                    "slideImage": "http://via.placeholder.com/1000x350"
+                }, {
+                    "slideContent": "Lorem ipsum dolor sit amet",
+                    "slideImage": "http://via.placeholder.com/1000x350"
+                }
+            ]
+        }, {
+            "lessonTitle": "Testing Lesson 2",
+            "lessonWeight": 2,
+            "lessonSlides": [
+                {
+                    "slideContent": "Lorem ipsum dolor sit amet",
+                    "slideImage": "http://via.placeholder.com/1000x350"
+                }, {
+                    "slideContent": "Lorem ipsum dolor sit amet",
+                    "slideImage": "http://via.placeholder.com/1000x350"
+                }
+            ]
+        }
+    ]
+}
