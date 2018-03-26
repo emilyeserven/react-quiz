@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 var path = require('path');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var BUILD_DIR = path.resolve(__dirname, 'public');
 var APP_DIR = path.resolve(__dirname, 'src');
@@ -21,9 +22,16 @@ var config = {
         loader : 'babel-loader'
       }, {
         test: /\.json$/, loader: 'json-loader'
+      }, {
+        test: /\.css$/, use: ['style-loader', 'css-loader']
       }
     ]
-  }
+  },
+  plugins: [
+        new HtmlWebpackPlugin({
+            template: 'src/index.html'
+        })
+    ],
 };
 
 module.exports = config;
