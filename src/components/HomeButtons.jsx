@@ -5,8 +5,6 @@ class HomeButtons extends React.Component {
       super(props);
     }
     render() {
-      console.log("HomeButtons");
-      console.log(this.props);
       return (
         <div className="row justify-content-center">
           <a

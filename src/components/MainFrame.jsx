@@ -6,8 +6,6 @@ import Results from './Results.jsx';
 import Lessons from './Lessons.jsx';
 
 function MainFrame(props) {
-    console.log("in MainFrame");
-    console.log(props);
     const view = props.view;
     if (view == "home") {
       return <Home
@@ -25,7 +23,7 @@ function MainFrame(props) {
     } else if (view == "results") {
       return <Results
         passedState={props.state}
-        setHomeView={props.setHomeView}
+        resetHomeView={props.resetHomeView}
       />;
     } else if (view == "lessons") {
       return <Lessons

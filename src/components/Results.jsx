@@ -1,13 +1,17 @@
 import React from 'react';
 
 class Results extends React.Component {
+  constructor(props){
+    super(props);
+  }
   render() {
+    console.log("Results");
     return(
       <div>
-        <h1>Results go here.</h1>
+        <h1>You got a {this.props.passedState.score}!</h1>
         <div className="row justify-content-center">
-          <Link to="/" className="btn btn-primary btn-large">Go Home</Link>&nbsp;&nbsp;
-          <Link to="/learn" className="btn btn-secondary btn-large">Learn</Link>
+          <button onClick={this.props.resetHomeView} className="btn btn-primary btn-large">Go Home</button>&nbsp;&nbsp;
+          <button to="/learn" className="btn btn-secondary btn-large">Learn</button>
         </div>
       </div>
     )

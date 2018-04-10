@@ -7,6 +7,8 @@ import QuestionChoice from './QuestionChoice.jsx';
 class Questions extends React.Component {
     constructor(props) {
       super(props);
+      console.log("<Questions />");
+      console.log(props);
       this.state = {
           qNum: 0,
           correct: 0,
@@ -15,13 +17,10 @@ class Questions extends React.Component {
           correctClasses: "btn btn-secondary btn-block text-left",
           incorrectClasses: "btn btn-secondary btn-block text-left"
       }
-      console.log("nextQuestion bind");
       this.nextQuestion = this.nextQuestion.bind(this);
-      console.log("choiceClick bind");
       this.choiceClick = this.choiceClick.bind(this);
     }
     choiceClick(qValue) {
-      console.log("choiceClick");
       this.props.updateScore(qValue);
       this.setState(function() {
         return {
@@ -32,7 +31,6 @@ class Questions extends React.Component {
     }
     nextQuestion(qNum) {
       qNum = Number(qNum) + 1;
-      //console.log("New qNum: ", qNum);
       this.setState(function() {
         return {
           qNum: qNum,
@@ -44,10 +42,7 @@ class Questions extends React.Component {
       this.extra -= " disabled";
     }
     render() {
-      console.log("Questions");
-      console.log(this.props);
       const QDATA = appData.questions[this.state.qNum];
-      console.log(appData.questions.length);
       return(
         <div>
           <h2>Question {Number([this.state.qNum]) + 1} of {appData.questions.length}</h2>
@@ -56,7 +51,7 @@ class Questions extends React.Component {
           <div className="col-10 offset-1">
             {
               QDATA.questionAnswers.map((item, index) => (
-                <QuestionChoice 
+                <QuestionChoice
                   choiceClick={this.choiceClick}
                   score={item.answerValue}
                   key={index}
@@ -76,8 +71,9 @@ class Questions extends React.Component {
             </button>
             &nbsp;&nbsp;
             <button
-              onClick={this.setResultsView} 
-              className={this.state.answered === true && Number(appData.questions.length - 1) === this.state.qNum ? "btn btn-secondary" : "btn btn-secondary disabled"} 
+              onClick={this.props.setResultsView}
+              disabled={this.state.answered === true && Number(appData.questions.length - 1) === this.state.qNum ? false : true}
+              className="btn btn-secondary"
               role="button">
               Results
             </button>

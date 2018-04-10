@@ -1,12 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
-import {
-  HashRouter,
-  Route,
-  Switch,
-  Link
-} from 'react-router-dom';
 
 import appData from './data.json';
 
@@ -22,6 +16,7 @@ class App extends React.Component {
       view: "home"
     }
     this.setHomeView = this.setHomeView.bind(this);
+    this.resetHomeView = this.resetHomeView.bind(this);
     this.setQuestionsView = this.setQuestionsView.bind(this);
     this.setResultsView = this.setResultsView.bind(this);
     this.setLessonsView = this.setLessonsView.bind(this);
@@ -29,20 +24,21 @@ class App extends React.Component {
   };
 
   updateScore(qVal) {
-    console.log("updateScore");
-    console.log("The old score is");
-    console.log(this.state.score);
-    console.log("qVal is " + qVal);
     const newVal = this.state.score + qVal;
-    console.log("newVal is " + newVal);
     this.setState({
       score: newVal
     });
-    console.log("the score is now");
-    console.log(this.state.score);
   }
   setHomeView() {
      this.setState({view: "home"});
+  }
+  resetHomeView() {
+    console.log("reset home view");
+    this.setState({
+      view: "home",
+      score: 0
+    });
+    console.log(this.state);
   }
   setQuestionsView() {
      this.setState({view: "questions"});
@@ -61,12 +57,13 @@ class App extends React.Component {
       <div className="container py-3 my-5 main-frame">
         <div>
           <MainFrame
-            view={this.state.view} 
-            state={this.state} 
-            setHomeView={this.setHomeView} 
-            setResultsView={this.setResultsView} 
-            setQuestionsView={this.setQuestionsView} 
+            view={this.state.view}
+            state={this.state}
+            setHomeView={this.setHomeView}
+            setResultsView={this.setResultsView}
+            setQuestionsView={this.setQuestionsView}
             updateScore={this.updateScore}
+            resetHomeView={this.resetHomeView}
           />
         </div>
       </div>
@@ -75,8 +72,4 @@ class App extends React.Component {
 }
 
 
-ReactDOM.render((
-  <HashRouter>
-    <App />
-  </HashRouter>
-), document.getElementById('container'));
+ReactDOM.render((<App />), document.getElementById('container'));

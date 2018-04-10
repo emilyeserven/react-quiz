@@ -9,9 +9,6 @@ class Home extends React.Component {
       super(props);
     }
     render() {
-      console.log("Home");
-      console.log(this.props);
-      console.log(this.props.setQuestionsView);
       return(
         <div className="container">
           <div className="row justify-content-center">
