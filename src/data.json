@@ -6,118 +6,96 @@
     "description": "Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.",
     "questions": [
         {
-            "questionContent": "Question 1 Lorem ipsum dolor sit amet",
+            "questionContent": "It's important to check over your privacy settings…",
             "questionImage": "http://via.placeholder.com/1000x350",
             "questionCategory": "Phishing",
+            "multipleAnswers": false,
             "questionAnswers": [
                 {
-                    "answerContent": "an answer (true)",
+                    "answerContent": "Once a month",
                     "answerImage": "an image",
-                    "answerValue": true
+                    "answerValue": 0
                 }, {
-                    "answerContent": "an answer (false)",
+                    "answerContent": "Once every year",
                     "answerImage": "an image",
-                    "answerValue": false
+                    "answerValue": 200
                 }, {
-                    "answerContent": "an answer (false)",
+                    "answerContent": "Never",
                     "answerImage": "an image",
-                    "answerValue": false
-                }, {
-                    "answerContent": "an answer (false)",
-                    "answerImage": "an image",
-                    "answerValue": false
+                    "answerValue": 400
                 }
             ]
         }, {
-            "questionContent": "Question 2 Lorem ipsum dolor sit amet",
+            "questionContent": "What is NOT true about cloud computing?",
             "questionImage": "http://via.placeholder.com/1000x350",
             "questionCategory": "Phishing",
+            "multipleAnswers": true,
             "questionAnswers": [
                 {
-                    "answerContent": "an answer",
+                    "answerContent": "Data is often managed by a third party host",
                     "answerImage": "an image",
-                    "answerValue": true
+                    "answerValue": 600
                 }, {
-                    "answerContent": "an answer (false)",
+                    "answerContent": "Data is often distributed among multiple servers",
                     "answerImage": "an image",
-                    "answerValue": false
+                    "answerValue": 900
                 }, {
-                    "answerContent": "an answer (false)",
+                    "answerContent": "Data is stored on your personal devices ",
                     "answerImage": "an image",
-                    "answerValue": false
-                }, {
-                    "answerContent": "an answer (false)",
-                    "answerImage": "an image",
-                    "answerValue": false
+                    "answerValue": 400
                 }
             ]
         }, {
-            "questionContent": "Question 3 Lorem ipsum dolor sit amet",
+            "questionContent": "What is phishing?",
             "questionImage": "http://via.placeholder.com/1000x350",
             "questionCategory": "Phishing",
             "questionAnswers": [
                 {
-                    "answerContent": "an answer",
+                    "answerContent": "When you have been hacked and your data has been compromised.",
                     "answerImage": "an image",
-                    "answerValue": true
+                    "answerValue": 400
                 }, {
-                    "answerContent": "an answer (false)",
+                    "answerContent": "When a malicious user attempts to bait another into providing compromising information",
                     "answerImage": "an image",
-                    "answerValue": false
+                    "answerValue": 800
                 }, {
-                    "answerContent": "an answer (false)",
+                    "answerContent": "When you go to a body of water to try and catch aquatic life",
                     "answerImage": "an image",
-                    "answerValue": false
-                }, {
-                    "answerContent": "an answer (false)",
-                    "answerImage": "an image",
-                    "answerValue": false
+                    "answerValue": 50
                 }
             ]
         }, {
-            "questionContent": "Question 4 Lorem ipsum dolor sit amet",
+            "questionContent": "What is a botnet?",
             "questionImage": "http://via.placeholder.com/1000x350",
             "questionCategory": "Phishing",
             "questionAnswers": [
                 {
-                    "answerContent": "an answer",
+                    "answerContent": "A network of computers controlled by another host computer",
                     "answerImage": "an image",
-                    "answerValue": true
+                    "answerValue": 700
                 }, {
-                    "answerContent": "an answer (false)",
+                    "answerContent": "A network of robot enthusiasts",
                     "answerImage": "an image",
-                    "answerValue": false
+                    "answerValue": 100
                 }, {
-                    "answerContent": "an answer (false)",
+                    "answerContent": "A network of killer robots",
                     "answerImage": "an image",
-                    "answerValue": false
-                }, {
-                    "answerContent": "an answer (false)",
-                    "answerImage": "an image",
-                    "answerValue": false
+                    "answerValue": 200
                 }
             ]
         }, {
-            "questionContent": "Question 5 Lorem ipsum dolor sit amet",
+            "questionContent": "The owner of a computer that is part of a botnet is always aware of botnet involvement.",
             "questionImage": "http://via.placeholder.com/1000x350",
             "questionCategory": "Phishing",
             "questionAnswers": [
                 {
-                    "answerContent": "an answer",
+                    "answerContent": "True",
                     "answerImage": "an image",
-                    "answerValue": true
+                    "answerValue": 200
                 }, {
-                    "answerContent": "an answer (false)",
-                    "answerImage": "an image",
-                    "answerValue": false
-                }, {
-                    "answerContent": "an answer (false)",
-                    "answerImage": "an image",
-                    "answerValue": false
-                }, {
-                    "answerContent": "an answer (false)",
-                    "answerImage": "an image",
-                    "answerValue": false
+                    "answerContent": "False",
+                    "answerImage": "False",
+                    "answerValue": 600
                 }
             ]
         }
