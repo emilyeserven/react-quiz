@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Button } from 'arwes';
+
 class HomeButtons extends React.Component {
     constructor(props) {
       super(props);
@@ -7,19 +9,17 @@ class HomeButtons extends React.Component {
     render() {
       return (
         <div className="row justify-content-center">
-          <a
-            className="btn btn-primary btn-lg"
-            role="button"
-            onClick={this.props.setQuestionsView}>
+          <Button
+            onClick={this.props.setQuestionsView}
+            layer='primary'>
             Start Quiz
-          </a>
+          </Button>
           &nbsp;&nbsp;
-          <button
-            to="/learn"
-            className="btn btn-secondary btn-lg"
+          <Button
+            layer='secondary'
             role="button">
             Learn More
-          </button>
+          </Button>
         </div>
       )
     }

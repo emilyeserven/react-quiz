@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 
+import { ThemeProvider, Arwes, Puffs, Button, createTheme, Frame } from 'arwes';
+
 import appData from './data.json';
 
 import MainFrame from './components/MainFrame.jsx';
@@ -11,7 +13,9 @@ class App extends React.Component {
     super();
     this.state = {
       qNum: 0,
-      score: 0,
+      scoreData: {
+        raw: 0
+      },
       qList: [],
       view: "home"
     }
@@ -20,13 +24,12 @@ class App extends React.Component {
     this.setQuestionsView = this.setQuestionsView.bind(this);
     this.setResultsView = this.setResultsView.bind(this);
     this.setLessonsView = this.setLessonsView.bind(this);
-    this.updateScore = this.updateScore.bind(this);
+    //this.updateScore = this.updateScore.bind(this);
   };
 
   updateScore(qVal) {
-    const newVal = this.state.score + qVal;
     this.setState({
-      score: newVal
+      score: qVal
     });
   }
   setHomeView() {
@@ -43,30 +46,43 @@ class App extends React.Component {
   setQuestionsView() {
      this.setState({view: "questions"});
   }
-  setResultsView() {
-     this.setState({view: "results"});
+  setResultsView(scoreData) {
+     this.setState({
+      view: "results",
+      scoreData: scoreData
+     });
   }
   setLessonsView() {
      this.setState({view: "lessons"});
   }
-// https://gist.github.com/sebkouba/a5ac75153ef8d8827b98
+
   render() {
     console.log("In App");
     console.log(this.state);
     return(
-      <div className="container py-3 my-5 main-frame">
-        <div>
-          <MainFrame
-            view={this.state.view}
-            state={this.state}
-            setHomeView={this.setHomeView}
-            setResultsView={this.setResultsView}
-            setQuestionsView={this.setQuestionsView}
-            updateScore={this.updateScore}
-            resetHomeView={this.resetHomeView}
-          />
-        </div>
-      </div>
+      <ThemeProvider theme={createTheme()}>
+        <Arwes>
+          <Puffs>
+            <div style={{ width: '100%', height: 600}}>
+            <div className="container py-3 my-5 main-frame">
+              <Frame level={3} corners={5} animate={false}>
+                <div className="py-5 px-5">
+                  <MainFrame
+                  view={this.state.view}
+                  state={this.state}
+                  setHomeView={this.setHomeView}
+                  setResultsView={this.setResultsView}
+                  setQuestionsView={this.setQuestionsView}
+                  //updateScore={this.updateScore}
+                  resetHomeView={this.resetHomeView}
+                  />
+                </div>
+              </Frame>
+              </div>
+            </div>
+          </Puffs>
+        </Arwes>
+      </ThemeProvider>
     );
   }
 }

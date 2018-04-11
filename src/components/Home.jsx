@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Heading, Words} from 'arwes';
 import appData from '../data.json';
 
 import HomeButtons from './HomeButtons.jsx';
@@ -20,12 +20,12 @@ class Home extends React.Component {
                 />
             </div>
             <div className="col-12 text-center">
-              <h1>{appData.name}</h1>
+              <h1><Words>{appData.name}</Words></h1>
             </div>
           </div>
           <div className="row justify-content-start">
             <div className="col-12">
-              <p>{appData.description}</p>
+              <p><Words>{appData.description}</Words></p>
             </div>
           </div>
           <HomeButtons setQuestionsView={this.props.setQuestionsView} />

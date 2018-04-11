@@ -1,6 +1,8 @@
 import React from 'react';
-
+import { Button } from 'arwes';
 import appData from '../data.json';
+
+import EButton from './EButton.jsx';
 
 import QuestionChoice from './QuestionChoice.jsx';
 
@@ -11,8 +13,11 @@ class Questions extends React.Component {
       console.log(props);
       this.state = {
           qNum: 0,
-          correct: 0,
-          incorrect: 0,
+          qLayers: 'control',
+          nextLayer: 'disabled',
+          scoresData: {
+            raw: 0
+          },
           answered: false,
           correctClasses: "btn btn-secondary btn-block text-left",
           incorrectClasses: "btn btn-secondary btn-block text-left"
@@ -21,32 +26,46 @@ class Questions extends React.Component {
       this.choiceClick = this.choiceClick.bind(this);
     }
     choiceClick(qValue) {
-      this.props.updateScore(qValue);
+      console.log("Hello");
+      console.log("this.state.scoresData.raw");
+      console.log(this.state.scoresData.raw);
+      console.log("qValue");
+      console.log(qValue);
+      const scoreAdded = this.state.scoresData.raw + qValue;
+      console.log(scoreAdded);
+      console.log(scoreAdded);
       this.setState(function() {
         return {
-          answered: true
+          answered: true,
+          qLayers: 'disabled',
+          nextLayer: 'control',
+          scoresData: {
+            raw: scoreAdded
+          }
         }
       });
-      this.extra -= " disabled";
+      console.log("new state");
+      console.log(this.state);
     }
     nextQuestion(qNum) {
       qNum = Number(qNum) + 1;
       this.setState(function() {
         return {
           qNum: qNum,
+          qLayers: 'control',
+          nextLayer: 'disabled',
           answered: false,
           correctClasses: "btn btn-secondary btn-block text-left",
           incorrectClasses: "btn btn-secondary btn-block text-left"
         }
       });
-      this.extra -= " disabled";
     }
     render() {
       const QDATA = appData.questions[this.state.qNum];
       return(
         <div>
           <h2>Question {Number([this.state.qNum]) + 1} of {appData.questions.length}</h2>
-          <p>Score: {this.props.passedState.score}</p>
+          <p>Score: {this.state.scoresData.raw}</p>
           <p>{QDATA.questionContent}</p>
           <div className="col-10 offset-1">
             {
@@ -55,28 +74,27 @@ class Questions extends React.Component {
                   choiceClick={this.choiceClick}
                   score={item.answerValue}
                   key={index}
-                  disabled={this.state.answered == true ? true : false}
+                  layersVal={this.state.qLayers}
+                  answered={this.state.answered == true ? true : false}
                   cssClasses={item.answerValue == true ? this.state.correctClasses : this.state.incorrectClasses}
                   content={item.answerContent} />
               ))
             }
           </div>
           <div className="text-right mt-3">
-            <button
+            <Button
               onClick={this.nextQuestion.bind(null, this.state.qNum)}
-              disabled={this.state.answered === true && Number(appData.questions.length - 1) !== this.state.qNum ? false : true}
-              className="btn btn-secondary"
-              role="button">
+              layer={this.state.answered === true && Number(appData.questions.length - 1) !== this.state.qNum ? 'primary' : 'disabled'}
+              disabled={this.state.answered === true && Number(appData.questions.length - 1) !== this.state.qNum ? false : true}>
               Next Question
-            </button>
+            </Button>
             &nbsp;&nbsp;
-            <button
-              onClick={this.props.setResultsView}
-              disabled={this.state.answered === true && Number(appData.questions.length - 1) === this.state.qNum ? false : true}
-              className="btn btn-secondary"
-              role="button">
+            <Button
+              onClick={() => this.props.setResultsView(this.state.scoresData)}
+              layer={this.state.answered === true && Number(appData.questions.length - 1) === this.state.qNum ? 'primary' : 'disabled'}
+              disabled={this.state.answered === true && Number(appData.questions.length - 1) === this.state.qNum ? false : true}>
               Results
-            </button>
+            </Button>
           </div>
         </div>
       );

@@ -1,7 +1,13 @@
 body {
-    background-color: lightblue;
-    background-image: url(../img/grid.png);
+    background-color: #000;
 }
-.main-frame {
-    background-color: #fff;
+
+.ebutton-render {
+    border-radius: 0;
+    border: 1px solid #fff;
+    background-color: rgba(0,0,0,0.5);
+    text-align:left;
+}
+.col-10 .ebutton-render {
+    width: 100%;
 }
