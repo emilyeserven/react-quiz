@@ -19,7 +19,7 @@ class QuestionChoice extends React.Component {
       return(
         <div className="mb-2">
           <Button
-            onClick={() => this.props.choiceClick(this.props.score)}
+            onClick={() => this.props.choiceClick(this.props.score, this.props.category)}
             layer={layerValue}
             //layer={this.props.layersVal}
             //level={this.props.answered == false ? 3 : 0}

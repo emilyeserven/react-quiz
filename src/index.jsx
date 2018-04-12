@@ -13,9 +13,9 @@ class App extends React.Component {
     super();
     this.state = {
       qNum: 0,
-      scoreData: {
-        raw: 0
-      },
+      scoresRaw: 0,
+      catFacebook: 0,
+      catGeneral: 0,
       qList: [],
       view: "home"
     }
@@ -29,7 +29,7 @@ class App extends React.Component {
 
   updateScore(qVal) {
     this.setState({
-      score: qVal
+      scoreData: qVal
     });
   }
   setHomeView() {
@@ -49,7 +49,9 @@ class App extends React.Component {
   setResultsView(scoreData) {
      this.setState({
       view: "results",
-      scoreData: scoreData
+      scoresRaw: scoreData.scoresRaw,
+      catFacebook: scoreData.catFacebook,
+      catGeneral: scoreData.catGeneral
      });
   }
   setLessonsView() {

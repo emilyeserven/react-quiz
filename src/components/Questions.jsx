@@ -15,9 +15,9 @@ class Questions extends React.Component {
           qNum: 0,
           qLayers: 'control',
           nextLayer: 'disabled',
-          scoresData: {
-            raw: 0
-          },
+          scoresRaw: 0,
+          catGeneral: 0,
+          catFacebook: 0,
           answered: false,
           correctClasses: "btn btn-secondary btn-block text-left",
           incorrectClasses: "btn btn-secondary btn-block text-left"
@@ -25,13 +25,14 @@ class Questions extends React.Component {
       this.nextQuestion = this.nextQuestion.bind(this);
       this.choiceClick = this.choiceClick.bind(this);
     }
-    choiceClick(qValue) {
+    choiceClick(qValue, catValue) {
       console.log("Hello");
-      console.log("this.state.scoresData.raw");
-      console.log(this.state.scoresData.raw);
+      console.log("this.state.scoresRaw");
+      console.log(this.state.scoresRaw);
       console.log("qValue");
       console.log(qValue);
-      const scoreAdded = this.state.scoresData.raw + qValue;
+      const scoreAdded = this.state.scoresRaw + qValue;
+      const catScore = this.state[catValue] + qValue;
       console.log(scoreAdded);
       console.log(scoreAdded);
       this.setState(function() {
@@ -39,9 +40,8 @@ class Questions extends React.Component {
           answered: true,
           qLayers: 'disabled',
           nextLayer: 'control',
-          scoresData: {
-            raw: scoreAdded
-          }
+          scoresRaw: scoreAdded,
+          [catValue]: catScore
         }
       });
       console.log("new state");
@@ -65,7 +65,8 @@ class Questions extends React.Component {
       return(
         <div>
           <h2>Question {Number([this.state.qNum]) + 1} of {appData.questions.length}</h2>
-          <p>Score: {this.state.scoresData.raw}</p>
+          <p>Score: {this.state.scoresRaw}</p>
+          <p>General: {this.state.catGeneral} | Facebook: {this.state.catFacebook}</p>
           <p>{QDATA.questionContent}</p>
           <div className="col-10 offset-1">
             {
@@ -73,6 +74,7 @@ class Questions extends React.Component {
                 <QuestionChoice
                   choiceClick={this.choiceClick}
                   score={item.answerValue}
+                  category={QDATA.questionCategory}
                   key={index}
                   layersVal={this.state.qLayers}
                   answered={this.state.answered == true ? true : false}
@@ -90,7 +92,7 @@ class Questions extends React.Component {
             </Button>
             &nbsp;&nbsp;
             <Button
-              onClick={() => this.props.setResultsView(this.state.scoresData)}
+              onClick={() => this.props.setResultsView(this.state)}
               layer={this.state.answered === true && Number(appData.questions.length - 1) === this.state.qNum ? 'primary' : 'disabled'}
               disabled={this.state.answered === true && Number(appData.questions.length - 1) === this.state.qNum ? false : true}>
               Results

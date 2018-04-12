@@ -1,19 +1,29 @@
 import React from 'react';
 
+import { Button } from 'arwes';
+
 class Results extends React.Component {
   constructor(props){
     super(props);
   }
   render() {
     console.log("Results");
-    console.log(this.state);
-    console.log(this.props.passedState.scoreData.raw);
+    console.log(this.props.passedState);
+    console.log(this.props.passedState.scoresRaw);
     return(
       <div>
-        <h1>You got a {this.props.passedState.scoreData.raw}!</h1>
+        <h1>You got a {this.props.passedState.scoresRaw}!</h1>
         <div className="row justify-content-center">
-          <button onClick={this.props.resetHomeView} className="btn btn-primary btn-large">Go Home</button>&nbsp;&nbsp;
-          <button to="/learn" className="btn btn-secondary btn-large">Learn</button>
+          <div className="mb-5">
+            <h3>Facebook Score</h3>
+            <p>{this.props.passedState.catFacebook}</p>
+            <h3>General Score</h3>
+            <p>{this.props.passedState.catGeneral}</p>
+          </div>
+        </div>
+        <div className="row justify-content-center">
+          <Button onClick={this.props.resetHomeView} layer='primary'>Go Home</Button>&nbsp;&nbsp;
+          <Button layer='secondary'>Learn</Button>
         </div>
       </div>
     )
