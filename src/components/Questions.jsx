@@ -65,8 +65,6 @@ class Questions extends React.Component {
       return(
         <div>
           <h2>Question {Number([this.state.qNum]) + 1} of {appData.questions.length}</h2>
-          <p>Score: {this.state.scoresRaw}</p>
-          <p>General: {this.state.catGeneral} | Facebook: {this.state.catFacebook}</p>
           <p>{QDATA.questionContent}</p>
           <div className="col-10 offset-1">
             {

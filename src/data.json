@@ -118,11 +118,11 @@
                 {
                     "answerContent": "True",
                     "answerImage": "an image",
-                    "answerValue": 200
+                    "answerValue": 100
                 }, {
                     "answerContent": "False",
                     "answerImage": "False",
-                    "answerValue": 600
+                    "answerValue": 200
                 }
             ]
         }, {
@@ -133,40 +133,44 @@
                 {
                     "answerContent": "True",
                     "answerImage": "an image",
-                    "answerValue": 200
+                    "answerValue": 100
                 }, {
                     "answerContent": "False",
                     "answerImage": "False",
-                    "answerValue": 600
+                    "answerValue": 200
                 }
             ]
         }
     ],
     "lessons": [
         {
-            "lessonTitle": "Testing Lesson 1",
-            "lessonWeight": 1,
-            "lessonSlides": [
-                {
-                    "slideContent": "Lorem ipsum dolor sit amet",
-                    "slideImage": "http://via.placeholder.com/1000x350"
-                }, {
-                    "slideContent": "Lorem ipsum dolor sit amet",
-                    "slideImage": "http://via.placeholder.com/1000x350"
-                }
-            ]
+            "title": "Testing Lesson 1",
+            "content": {
+                "what": "Lorem ipsum dolor sit amet",
+                "why": "Lorem ipsum dolor sit amet",
+                "action": "Lorem ipsum dolor sit amet",
+                "more": [
+                    {
+                        "name": "Link",
+                        "url": "#",
+                        "description": "Lorem ipsum dolor sit amet"
+                    }
+                ]
+            }
         }, {
-            "lessonTitle": "Testing Lesson 2",
-            "lessonWeight": 2,
-            "lessonSlides": [
-                {
-                    "slideContent": "Lorem ipsum dolor sit amet",
-                    "slideImage": "http://via.placeholder.com/1000x350"
-                }, {
-                    "slideContent": "Lorem ipsum dolor sit amet",
-                    "slideImage": "http://via.placeholder.com/1000x350"
-                }
-            ]
+            "title": "Testing Lesson 1",
+            "content": {
+                "what": "Lorem ipsum dolor sit amet",
+                "why": "Lorem ipsum dolor sit amet",
+                "action": "Lorem ipsum dolor sit amet",
+                "more": [
+                    {
+                        "name": "Link",
+                        "url": "#",
+                        "description": "Lorem ipsum dolor sit amet"
+                    }
+                ]
+            }
         }
     ]
 }

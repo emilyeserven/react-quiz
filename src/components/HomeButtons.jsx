@@ -16,6 +16,7 @@ class HomeButtons extends React.Component {
           </Button>
           &nbsp;&nbsp;
           <Button
+            onClick={this.props.setLessonsView}
             layer='secondary'
             role="button">
             Learn More

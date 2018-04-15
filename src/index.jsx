@@ -13,6 +13,7 @@ class App extends React.Component {
     super();
     this.state = {
       qNum: 0,
+      lNum: 0,
       scoresRaw: 0,
       catFacebook: 0,
       catGeneral: 0,
@@ -24,6 +25,7 @@ class App extends React.Component {
     this.setQuestionsView = this.setQuestionsView.bind(this);
     this.setResultsView = this.setResultsView.bind(this);
     this.setLessonsView = this.setLessonsView.bind(this);
+    this.setLessonView = this.setLessonView.bind(this);
     //this.updateScore = this.updateScore.bind(this);
   };
 
@@ -57,6 +59,12 @@ class App extends React.Component {
   setLessonsView() {
      this.setState({view: "lessons"});
   }
+  setLessonView(lessonNum) {
+     this.setState({
+       view: "lesson",
+       lNum: lessonNum
+     });
+  }
 
   render() {
     console.log("In App");
@@ -75,6 +83,9 @@ class App extends React.Component {
                   setHomeView={this.setHomeView}
                   setResultsView={this.setResultsView}
                   setQuestionsView={this.setQuestionsView}
+                  setLessonsView={this.setLessonsView}
+                  setLessonView={this.setLessonView}
+                  lNum={this.state.lNum}
                   //updateScore={this.updateScore}
                   resetHomeView={this.resetHomeView}
                   />

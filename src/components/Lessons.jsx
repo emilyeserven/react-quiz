@@ -1,19 +1,30 @@
 import React from 'react';
 
 import Lesson from './Lesson.jsx';
+import { Button } from 'arwes';
+
+import appData from '../data.json';
 
 class Lessons extends React.Component {
+  constructor(props) {
+    super(props);
+    }
     render() {
       return(
         <div>
           <h1>Lessons</h1>
           {
             appData.lessons.map((item, index) => (
-              <Link to={"/learn/" + [index + 1]} key={index} className="btn btn-secondary btn-block text-left">{item.lessonTitle}</Link>
+              <Button
+              onClick={() => this.props.setLessonView(index)}
+              key={index}
+              className="text-left fullwidth mb-2">
+                {item.title}
+              </Button>
             ))
           }
           <div className="row mt-3 justify-content-center">
-            <Link to="/" className="btn btn-secondary btn-large">Back to Home</Link>
+            <Button onClick={this.props.setHomeView} layer='secondary'>Back to Home</Button>
           </div>
         </div>
       );

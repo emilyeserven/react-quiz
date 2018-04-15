@@ -28,7 +28,9 @@ class Home extends React.Component {
               <p><Words>{appData.description}</Words></p>
             </div>
           </div>
-          <HomeButtons setQuestionsView={this.props.setQuestionsView} />
+          <HomeButtons
+            setQuestionsView={this.props.setQuestionsView}
+            setLessonsView={this.props.setLessonsView} />
         </div>
       )
     }

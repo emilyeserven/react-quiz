@@ -4,6 +4,7 @@ import Home from './Home.jsx';
 import Questions from './Questions.jsx';
 import Results from './Results.jsx';
 import Lessons from './Lessons.jsx';
+import Lesson from './Lesson.jsx';
 
 function MainFrame(props) {
     const view = props.view;
@@ -24,11 +25,19 @@ function MainFrame(props) {
       return <Results
         passedState={props.state}
         resetHomeView={props.resetHomeView}
+        setLessonsView={props.setLessonsView}
       />;
     } else if (view == "lessons") {
       return <Lessons
         passedState={props.state}
         setHomeView={props.setHomeView}
+        setLessonView={props.setLessonView}
+      />;
+    } else if (view == "lesson") {
+      return <Lesson
+        lNum={props.lNum}
+        setHomeView={props.setHomeView}
+        setLessonsView={props.setLessonsView}
       />;
     }
   }
