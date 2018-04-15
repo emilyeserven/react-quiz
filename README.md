@@ -15,4 +15,4 @@
 
 [JSS](http://cssinjs.org/react-jss/?v=v8.4.0#example)
 
-[View Here](https://rawgit.com/emilyeserven/react-quiz/master/src/index.html)
+[View Here](https://rawgit.com/emilyeserven/react-quiz/master/public/index.html)
