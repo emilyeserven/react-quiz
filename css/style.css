@@ -1,0 +1,42 @@
+body {
+    background-color: #000;
+    font-family: Helvetica;
+}
+span {
+    font-family: Helvetica;
+}
+
+.ebutton-render {
+    border-radius: 0;
+    border: 1px solid #fff;
+    background-color: rgba(0,0,0,0.5);
+    text-align:left;
+}
+.col-10 .ebutton-render {
+    width: 100%;
+}
+.fullwidth {
+    width: 100%;
+}
+.button-left button {
+    text-align: left;
+}
+.frame-container {
+    overflow-y:scroll;
+    overflow-x:hidden;
+    max-height:95vh;
+}
+.arwes > div {
+    overflow:hidden !important;;
+}
+@media screen and (max-width: 600px) {
+    .home-screen h1 span, .question-screen h2, .results-screen h1 {
+        font-size: 25px;
+    }
+    .results-screen h3 {
+        font-size: 22px;
+    }
+    .home-screen p span, .question-screen p, .results-screen p {
+        font-size: 18px;
+    }
+}
