@@ -66,7 +66,7 @@ class Questions extends React.Component {
         <div>
           <h2>Question {Number([this.state.qNum]) + 1} of {appData.questions.length}</h2>
           <p>{QDATA.questionContent}</p>
-          <div className="col-10 offset-1">
+          <div className="col-12 col-md-10 offset-md-1">
             {
               QDATA.questionAnswers.map((item, index) => (
                 <QuestionChoice
@@ -81,7 +81,7 @@ class Questions extends React.Component {
               ))
             }
           </div>
-          <div className="text-right mt-3">
+          <div className="text-center text-md-right mt-3">
             <Button
               onClick={this.nextQuestion.bind(null, this.state.qNum)}
               layer={this.state.answered === true && Number(appData.questions.length - 1) !== this.state.qNum ? 'primary' : 'disabled'}

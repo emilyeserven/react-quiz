@@ -17,6 +17,7 @@ class QuestionChoice extends React.Component {
             onClick={() => this.props.choiceClick(this.props.score, this.props.category)}
             layer={layerValue}
             disabled={disabledValue}
+            className="button-left"
             style={{width: '100%'}}>
             {this.props.content}
           </Button>

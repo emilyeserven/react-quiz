@@ -57198,7 +57198,7 @@ class Questions extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component 
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
-        { className: 'col-10 offset-1' },
+        { className: 'col-12 col-md-10 offset-md-1' },
         QDATA.questionAnswers.map((item, index) => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__QuestionChoice_jsx__["a" /* default */], {
           choiceClick: this.choiceClick,
           score: item.answerValue,
@@ -57211,7 +57211,7 @@ class Questions extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component 
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
-        { className: 'text-right mt-3' },
+        { className: 'text-center text-md-right mt-3' },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           __WEBPACK_IMPORTED_MODULE_1_arwes__["Button"],
           {
@@ -57268,6 +57268,7 @@ class QuestionChoice extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Compo
           onClick: () => this.props.choiceClick(this.props.score, this.props.category),
           layer: layerValue,
           disabled: disabledValue,
+          className: 'button-left',
           style: { width: '100%' } },
         this.props.content
       )
