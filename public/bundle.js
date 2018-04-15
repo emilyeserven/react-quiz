@@ -18147,16 +18147,16 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
           null,
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
-            { style: { width: '100%', height: 600 } },
+            { style: { width: '100%', height: '90vh' } },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               'div',
-              { className: 'container py-3 my-5 main-frame' },
+              { className: 'container py-3 px-3 px-md-0 my-md-5 main-frame' },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 __WEBPACK_IMPORTED_MODULE_3_arwes__["Frame"],
                 { level: 3, corners: 5, animate: false },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                   'div',
-                  { className: 'py-5 px-5' },
+                  { className: 'py-md-5 px-md-5 px-3 py-3 frame-container' },
                   __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__components_MainFrame_jsx__["a" /* default */], {
                     view: this.state.view,
                     state: this.state,
@@ -57008,19 +57008,10 @@ class Home extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
   render() {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
-      { className: 'container' },
+      { className: 'container home-screen' },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { className: 'row justify-content-center' },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'div',
-          { className: 'col-12 text-center' },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', {
-            src: __WEBPACK_IMPORTED_MODULE_2__data_json___default.a.logoUrl,
-            width: __WEBPACK_IMPORTED_MODULE_2__data_json___default.a.logoWidth,
-            height: __WEBPACK_IMPORTED_MODULE_2__data_json___default.a.logoHeight
-          })
-        ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'div',
           { className: 'col-12 text-center' },
@@ -57182,7 +57173,7 @@ class Questions extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component 
     const QDATA = __WEBPACK_IMPORTED_MODULE_2__data_json___default.a.questions[this.state.qNum];
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
-      null,
+      { className: 'question-screen' },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'h2',
         null,
@@ -57320,7 +57311,7 @@ class Results extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
     const maxScore = maxFacebook + maxGeneral;
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
-      null,
+      { className: 'results-screen' },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'h1',
         null,

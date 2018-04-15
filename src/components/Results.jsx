@@ -26,7 +26,7 @@ class Results extends React.Component {
     const maxGeneral = maxQuestions("catGeneral");
     const maxScore = maxFacebook + maxGeneral;
     return(
-      <div>
+      <div className="results-screen">
         <h1>You got a {this.props.passedState.scoresRaw} out of {maxScore}!</h1>
         <div className="row justify-content-center">
           <div className="mb-5">

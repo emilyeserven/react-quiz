@@ -10,15 +10,8 @@ class Home extends React.Component {
     }
     render() {
       return(
-        <div className="container">
+        <div className="container home-screen">
           <div className="row justify-content-center">
-            <div className="col-12 text-center">
-              <img
-                src={appData.logoUrl}
-                width={appData.logoWidth}
-                height={appData.logoHeight}
-                />
-            </div>
             <div className="col-12 text-center">
               <h1><Words>{appData.name}</Words></h1>
             </div>

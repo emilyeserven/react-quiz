@@ -63,7 +63,7 @@ class Questions extends React.Component {
     render() {
       const QDATA = appData.questions[this.state.qNum];
       return(
-        <div>
+        <div className="question-screen">
           <h2>Question {Number([this.state.qNum]) + 1} of {appData.questions.length}</h2>
           <p>{QDATA.questionContent}</p>
           <div className="col-12 col-md-10 offset-md-1">
