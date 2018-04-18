@@ -16,8 +16,11 @@ class Questions extends React.Component {
           qLayers: 'control',
           nextLayer: 'disabled',
           scoresRaw: 0,
-          catGeneral: 0,
-          catFacebook: 0,
+          catAccounts: 0,
+          catHardware: 0,
+          catBrowser: 0,
+          catAuth: 0,
+          catSocial: 0,
           answered: false,
           correctClasses: "btn btn-secondary btn-block text-left",
           incorrectClasses: "btn btn-secondary btn-block text-left"

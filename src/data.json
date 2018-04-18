@@ -7,7 +7,7 @@
     "questions": [
         {
             "questionContent": "I use multifactor authentication to log into various online accounts",
-            "questionCategory": "catGeneral",
+            "questionCategory": "catAccounts",
             "questionAnswers": [
                 {
                     "answerContent": "Yes",
@@ -22,7 +22,7 @@
             ]
         }, {
             "questionContent": "I usually perform virus and malware scans on my computer…",
-            "questionCategory": "catGeneral",
+            "questionCategory": "catHardware",
             "questionAnswers": [
                 {
                     "answerContent": "Never",
@@ -40,7 +40,7 @@
             ]
         }, {
             "questionContent": "Do you use an adblocker?",
-            "questionCategory": "catGeneral",
+            "questionCategory": "catBrowser",
             "questionAnswers": [
                 {
                     "answerContent": "Yes, when I can.",
@@ -51,50 +51,32 @@
                 }
             ]
         }, {
-            "questionContent": "The amount of Facebook friends I have are about...",
-            "questionCategory": "catFacebook",
+            "questionContent": "I use truthful answers for security questions. (ie \"What was your first pet's name?\"",
+            "questionCategory": "catAuth",
             "questionAnswers": [
                 {
-                    "answerContent": "1-100",
+                    "answerContent": "Yes",
                     "answerValue": 100
                 }, {
-                    "answerContent": "101-200",
+                    "answerContent": "No",
                     "answerValue": 200
-                }, {
-                    "answerContent": "201-300",
-                    "answerValue": 300
-                }, {
-                    "answerContent": "301-400",
-                    "answerValue": 400
-                }, {
-                    "answerContent": "401-500",
-                    "answerValue": 500
-                }, {
-                    "answerContent": "501+",
-                    "answerValue": 600
                 }
             ]
         }, {
-            "questionContent": "I use Facebook apps…",
-            "questionCategory": "catFacebook",
+            "questionContent": "I deactivate accounts for websites and services that I no longer use.",
+            "questionCategory": "catAccounts",
             "questionAnswers": [
                 {
-                    "answerContent": "Every day",
-                    "answerValue": 400
-                }, {
-                    "answerContent": "Once a week",
-                    "answerValue": 300
-                }, {
-                    "answerContent": "Once a month",
-                    "answerValue": 200
-                }, {
-                    "answerContent": "Never",
+                    "answerContent": "Yes",
                     "answerValue": 100
+                }, {
+                    "answerContent": "No",
+                    "answerValue": 200
                 }
             ]
         }, {
-            "questionContent": "The last time I checked my Facebook privacy settings was…",
-            "questionCategory": "catFacebook",
+            "questionContent": "The last time I checked privacy settings for my social media accounts was…",
+            "questionCategory": "catSocial",
             "questionAnswers": [
                 {
                     "answerContent": "Within 1 month ago",
@@ -111,33 +93,74 @@
                 }
             ]
         }, {
-            "questionContent": "The owner of a computer that is part of a botnet is always aware of botnet involvement.",
-            "questionImage": "http://via.placeholder.com/1000x350",
-            "questionCategory": "catFacebook",
+            "questionContent": "I use unique passwords...",
+            "questionCategory": "catAuth",
             "questionAnswers": [
                 {
-                    "answerContent": "True",
+                    "answerContent": "For every website.",
                     "answerImage": "an image",
                     "answerValue": 100
                 }, {
-                    "answerContent": "False",
+                    "answerContent": "For important websites only. (Banking, email, etc.)",
+                    "answerImage": "False",
+                    "answerValue": 200
+                }, {
+                    "answerContent": "All my passwords are the same.",
+                    "answerImage": "False",
+                    "answerValue": 300
+                }
+            ]
+        }, {
+            "questionContent": "Do you have a physical cover on your webcam (or, do you unplug your webcam when not in use)?",
+            "questionImage": "http://via.placeholder.com/1000x350",
+            "questionCategory": "catHardware",
+            "questionAnswers": [
+                {
+                    "answerContent": "Yes",
+                    "answerImage": "an image",
+                    "answerValue": 100
+                }, {
+                    "answerContent": "No",
                     "answerImage": "False",
                     "answerValue": 200
                 }
             ]
         }, {
-            "questionContent": "The owner of a computer that is part of a botnet is always aware of botnet involvement.",
+            "questionContent": "I check my browser extensions and plugins...",
             "questionImage": "http://via.placeholder.com/1000x350",
-            "questionCategory": "catFacebook",
+            "questionCategory": "catBrowser",
             "questionAnswers": [
                 {
-                    "answerContent": "True",
+                    "answerContent": "Every day",
+                    "answerValue": 400
+                }, {
+                    "answerContent": "Once a week",
+                    "answerValue": 300
+                }, {
+                    "answerContent": "Once a month",
+                    "answerValue": 200
+                }, {
+                    "answerContent": "Never",
+                    "answerValue": 100
+                }
+            ]
+        }, {
+            "questionContent": "I post pictures of my vacations on social media.",
+            "questionImage": "http://via.placeholder.com/1000x350",
+            "questionCategory": "catSocial",
+            "questionAnswers": [
+                {
+                    "answerContent": "Yes, but after I've returned home.",
                     "answerImage": "an image",
                     "answerValue": 100
                 }, {
-                    "answerContent": "False",
+                    "answerContent": "Yes, while I'm on vacation.",
                     "answerImage": "False",
                     "answerValue": 200
+                }, {
+                    "answerContent": "No.",
+                    "answerImage": "False",
+                    "answerValue": 300
                 }
             ]
         }

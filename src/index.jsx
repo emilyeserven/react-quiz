@@ -15,8 +15,11 @@ class App extends React.Component {
       qNum: 0,
       lNum: 0,
       scoresRaw: 0,
-      catFacebook: 0,
-      catGeneral: 0,
+      catAccounts: 0,
+      catHardware: 0,
+      catBrowser: 0,
+      catAuth: 0,
+      catSocial: 0,
       qList: [],
       view: "home"
     }
@@ -52,8 +55,11 @@ class App extends React.Component {
      this.setState({
       view: "results",
       scoresRaw: scoreData.scoresRaw,
-      catFacebook: scoreData.catFacebook,
-      catGeneral: scoreData.catGeneral
+      catAccounts: scoreData.catAccounts,
+      catHardware: scoreData.catHardware,
+      catBrowser: scoreData.catBrowser,
+      catAuth: scoreData.catAuth,
+      catSocial: scoreData.catSocial
      });
   }
   setLessonsView() {
