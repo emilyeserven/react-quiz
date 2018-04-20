@@ -30,7 +30,8 @@ class Results extends React.Component {
     const maxScore = maxAccounts + maxHardware + maxBrowser + maxAuth + maxSocial;
     return(
       <div className="results-screen">
-        <h1>You got a {this.props.passedState.scoresRaw} out of {maxScore}!</h1>
+        <h1>Your digital security risk is {this.props.passedState.scoresRaw}!</h1>
+        <p>This is out of a maximum score of {maxScore}. A higher score indicates higher risk. A breakdown of your risk per category is below.</p>
         <div className="row justify-content-center">
           <div className="mb-5">
             <h3>Accounts Score</h3>

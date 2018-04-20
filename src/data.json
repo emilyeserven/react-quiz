@@ -3,24 +3,9 @@
     "logoUrl": "./img/logo.svg",
     "logoWidth": "250px",
     "logoHeight": "100px",
-    "description": "Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.",
+    "description": "This quiz is designed to help you think about digital habits that you have, how these impact your digital security, and how to improve habits that leave you vulnerable.",
     "questions": [
         {
-            "questionContent": "I use multifactor authentication to log into various online accounts",
-            "questionCategory": "catAccounts",
-            "questionAnswers": [
-                {
-                    "answerContent": "Yes",
-                    "answerValue": 100
-                }, {
-                    "answerContent": "No",
-                    "answerValue": 200
-                }, {
-                    "answerContent": "What is multifactor authentication…?",
-                    "answerValue": 300
-                }
-            ]
-        }, {
             "questionContent": "I usually perform virus and malware scans on my computer…",
             "questionCategory": "catHardware",
             "questionAnswers": [
@@ -51,7 +36,7 @@
                 }
             ]
         }, {
-            "questionContent": "I use truthful answers for security questions. (ie \"What was your first pet's name?\"",
+            "questionContent": "I use truthful answers for security questions. (ie \"What was your first pet's name?\")",
             "questionCategory": "catAuth",
             "questionAnswers": [
                 {
@@ -60,6 +45,21 @@
                 }, {
                     "answerContent": "No",
                     "answerValue": 200
+                }
+            ]
+        }, {
+            "questionContent": "I use multifactor authentication to log into various online accounts",
+            "questionCategory": "catAuth",
+            "questionAnswers": [
+                {
+                    "answerContent": "Yes",
+                    "answerValue": 100
+                }, {
+                    "answerContent": "No",
+                    "answerValue": 200
+                }, {
+                    "answerContent": "What is multifactor authentication…?",
+                    "answerValue": 300
                 }
             ]
         }, {
@@ -167,7 +167,26 @@
     ],
     "lessons": [
         {
-            "title": "Testing Lesson 1",
+            "title": "Authentication",
+            "content": {
+                "what": "Authentication is a series of steps (like password entry) designed to ensure people signing into accounts are who they say they are.",
+                "why": "Authentication makes sure that users only access what they're supposed to and data is protected.",
+                "action": "Use multi-factor authentication and make sure your passwords are strong and not used across the same websites.",
+                "more": [
+                    {
+                        "name": "How to Create Stronger Passwords",
+                        "url": "https://support.google.com/accounts/answer/32040?hl=en",
+                        "description": "3 steps you can take."
+                    },
+                    {
+                        "name": "What is 2FA?",
+                        "url": "https://www.securenvoy.com/two-factor-authentication/what-is-2fa.shtm",
+                        "description": "an introduction to multifactor/two factor authentication and how to enable it."
+                    }
+                ]
+            }
+        }, {
+            "title": "Online Accounts",
             "content": {
                 "what": "Lorem ipsum dolor sit amet",
                 "why": "Lorem ipsum dolor sit amet",
@@ -181,7 +200,35 @@
                 ]
             }
         }, {
-            "title": "Testing Lesson 1",
+            "title": "The Browser",
+            "content": {
+                "what": "Lorem ipsum dolor sit amet",
+                "why": "Lorem ipsum dolor sit amet",
+                "action": "Lorem ipsum dolor sit amet",
+                "more": [
+                    {
+                        "name": "Link",
+                        "url": "#",
+                        "description": "Lorem ipsum dolor sit amet"
+                    }
+                ]
+            }
+        }, {
+            "title": "Hardware",
+            "content": {
+                "what": "Lorem ipsum dolor sit amet",
+                "why": "Lorem ipsum dolor sit amet",
+                "action": "Lorem ipsum dolor sit amet",
+                "more": [
+                    {
+                        "name": "Link",
+                        "url": "#",
+                        "description": "Lorem ipsum dolor sit amet"
+                    }
+                ]
+            }
+        }, {
+            "title": "Social Media",
             "content": {
                 "what": "Lorem ipsum dolor sit amet",
                 "why": "Lorem ipsum dolor sit amet",
