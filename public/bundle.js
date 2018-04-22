@@ -6750,7 +6750,7 @@ module.exports = g;
 /* 32 */
 /***/ (function(module, exports) {
 
-module.exports = { "name": "Security Quiz", "logoUrl": "./img/logo.svg", "logoWidth": "250px", "logoHeight": "100px", "description": "Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.", "questions": [{ "questionContent": "I use multifactor authentication to log into various online accounts", "questionCategory": "catGeneral", "questionAnswers": [{ "answerContent": "Yes", "answerValue": 100 }, { "answerContent": "No", "answerValue": 200 }, { "answerContent": "What is multifactor authentication…?", "answerValue": 300 }] }, { "questionContent": "I usually perform virus and malware scans on my computer…", "questionCategory": "catGeneral", "questionAnswers": [{ "answerContent": "Never", "answerValue": 400 }, { "answerContent": "Rarely, once a year or so", "answerValue": 300 }, { "answerContent": "Sometimes, once every few months", "answerValue": 200 }, { "answerContent": "Often, once every month", "answerValue": 100 }] }, { "questionContent": "Do you use an adblocker?", "questionCategory": "catGeneral", "questionAnswers": [{ "answerContent": "Yes, when I can.", "answerValue": 100 }, { "answerContent": "No.", "answerValue": 200 }] }, { "questionContent": "The amount of Facebook friends I have are about...", "questionCategory": "catFacebook", "questionAnswers": [{ "answerContent": "1-100", "answerValue": 100 }, { "answerContent": "101-200", "answerValue": 200 }, { "answerContent": "201-300", "answerValue": 300 }, { "answerContent": "301-400", "answerValue": 400 }, { "answerContent": "401-500", "answerValue": 500 }, { "answerContent": "501+", "answerValue": 600 }] }, { "questionContent": "I use Facebook apps…", "questionCategory": "catFacebook", "questionAnswers": [{ "answerContent": "Every day", "answerValue": 400 }, { "answerContent": "Once a week", "answerValue": 300 }, { "answerContent": "Once a month", "answerValue": 200 }, { "answerContent": "Never", "answerValue": 100 }] }, { "questionContent": "The last time I checked my Facebook privacy settings was…", "questionCategory": "catFacebook", "questionAnswers": [{ "answerContent": "Within 1 month ago", "answerValue": 100 }, { "answerContent": "1-3 months ago", "answerValue": 200 }, { "answerContent": "3-6 months ago", "answerValue": 300 }, { "answerContent": "More than half a year ago", "answerValue": 400 }] }, { "questionContent": "The owner of a computer that is part of a botnet is always aware of botnet involvement.", "questionImage": "http://via.placeholder.com/1000x350", "questionCategory": "catFacebook", "questionAnswers": [{ "answerContent": "True", "answerImage": "an image", "answerValue": 100 }, { "answerContent": "False", "answerImage": "False", "answerValue": 200 }] }, { "questionContent": "The owner of a computer that is part of a botnet is always aware of botnet involvement.", "questionImage": "http://via.placeholder.com/1000x350", "questionCategory": "catFacebook", "questionAnswers": [{ "answerContent": "True", "answerImage": "an image", "answerValue": 100 }, { "answerContent": "False", "answerImage": "False", "answerValue": 200 }] }], "lessons": [{ "title": "Testing Lesson 1", "content": { "what": "Lorem ipsum dolor sit amet", "why": "Lorem ipsum dolor sit amet", "action": "Lorem ipsum dolor sit amet", "more": [{ "name": "Link", "url": "#", "description": "Lorem ipsum dolor sit amet" }] } }, { "title": "Testing Lesson 1", "content": { "what": "Lorem ipsum dolor sit amet", "why": "Lorem ipsum dolor sit amet", "action": "Lorem ipsum dolor sit amet", "more": [{ "name": "Link", "url": "#", "description": "Lorem ipsum dolor sit amet" }] } }] };
+module.exports = { "name": "Security Quiz", "logoUrl": "./img/logo.svg", "logoWidth": "250px", "logoHeight": "100px", "description": "This quiz is designed to help you think about digital habits that you have, how these impact your digital security, and how to improve habits that leave you vulnerable.", "questions": [{ "questionContent": "I usually perform virus and malware scans on my computer…", "questionCategory": "catHardware", "questionAnswers": [{ "answerContent": "Never", "answerValue": 400 }, { "answerContent": "Rarely, once a year or so", "answerValue": 300 }, { "answerContent": "Sometimes, once every few months", "answerValue": 200 }, { "answerContent": "Often, once every month", "answerValue": 100 }] }, { "questionContent": "Do you use an adblocker?", "questionCategory": "catBrowser", "questionAnswers": [{ "answerContent": "Yes, when I can.", "answerValue": 100 }, { "answerContent": "No.", "answerValue": 200 }] }, { "questionContent": "I use truthful answers for security questions. (ie \"What was your first pet's name?\")", "questionCategory": "catAuth", "questionAnswers": [{ "answerContent": "Yes", "answerValue": 100 }, { "answerContent": "No", "answerValue": 200 }] }, { "questionContent": "I use multifactor authentication to log into various online accounts", "questionCategory": "catAuth", "questionAnswers": [{ "answerContent": "Yes", "answerValue": 100 }, { "answerContent": "No", "answerValue": 200 }, { "answerContent": "What is multifactor authentication…?", "answerValue": 300 }] }, { "questionContent": "I deactivate accounts for websites and services that I no longer use.", "questionCategory": "catAccounts", "questionAnswers": [{ "answerContent": "Yes", "answerValue": 100 }, { "answerContent": "No", "answerValue": 200 }] }, { "questionContent": "The last time I checked privacy settings for my social media accounts was…", "questionCategory": "catSocial", "questionAnswers": [{ "answerContent": "Within 1 month ago", "answerValue": 100 }, { "answerContent": "1-3 months ago", "answerValue": 200 }, { "answerContent": "3-6 months ago", "answerValue": 300 }, { "answerContent": "More than half a year ago", "answerValue": 400 }] }, { "questionContent": "I use unique passwords...", "questionCategory": "catAuth", "questionAnswers": [{ "answerContent": "For every website.", "answerImage": "an image", "answerValue": 100 }, { "answerContent": "For important websites only. (Banking, email, etc.)", "answerImage": "False", "answerValue": 200 }, { "answerContent": "All my passwords are the same.", "answerImage": "False", "answerValue": 300 }] }, { "questionContent": "Do you have a physical cover on your webcam (or, do you unplug your webcam when not in use)?", "questionImage": "http://via.placeholder.com/1000x350", "questionCategory": "catHardware", "questionAnswers": [{ "answerContent": "Yes", "answerImage": "an image", "answerValue": 100 }, { "answerContent": "No", "answerImage": "False", "answerValue": 200 }] }, { "questionContent": "I check my browser extensions and plugins...", "questionImage": "http://via.placeholder.com/1000x350", "questionCategory": "catBrowser", "questionAnswers": [{ "answerContent": "Every day", "answerValue": 400 }, { "answerContent": "Once a week", "answerValue": 300 }, { "answerContent": "Once a month", "answerValue": 200 }, { "answerContent": "Never", "answerValue": 100 }] }, { "questionContent": "I post pictures of my vacations on social media.", "questionImage": "http://via.placeholder.com/1000x350", "questionCategory": "catSocial", "questionAnswers": [{ "answerContent": "Yes, but after I've returned home.", "answerImage": "an image", "answerValue": 100 }, { "answerContent": "Yes, while I'm on vacation.", "answerImage": "False", "answerValue": 200 }, { "answerContent": "No.", "answerImage": "False", "answerValue": 300 }] }], "lessons": [{ "title": "Authentication", "content": { "what": "Authentication is a series of steps (like password entry) designed to ensure people signing into accounts are who they say they are.", "why": "Authentication makes sure that users only access what they're supposed to and data is protected.", "action": "Use multi-factor authentication and make sure your passwords are strong and not used across the same websites.", "more": [{ "name": "How to Create Stronger Passwords", "url": "https://support.google.com/accounts/answer/32040?hl=en", "description": "3 steps you can take." }, { "name": "What is 2FA?", "url": "https://www.securenvoy.com/two-factor-authentication/what-is-2fa.shtm", "description": "an introduction to multifactor/two factor authentication and how to enable it." }] } }, { "title": "Online Accounts", "content": { "what": "Lorem ipsum dolor sit amet", "why": "Lorem ipsum dolor sit amet", "action": "Lorem ipsum dolor sit amet", "more": [{ "name": "Link", "url": "#", "description": "Lorem ipsum dolor sit amet" }] } }, { "title": "The Browser", "content": { "what": "Lorem ipsum dolor sit amet", "why": "Lorem ipsum dolor sit amet", "action": "Lorem ipsum dolor sit amet", "more": [{ "name": "Link", "url": "#", "description": "Lorem ipsum dolor sit amet" }] } }, { "title": "Hardware", "content": { "what": "Lorem ipsum dolor sit amet", "why": "Lorem ipsum dolor sit amet", "action": "Lorem ipsum dolor sit amet", "more": [{ "name": "Link", "url": "#", "description": "Lorem ipsum dolor sit amet" }] } }, { "title": "Social Media", "content": { "what": "Lorem ipsum dolor sit amet", "why": "Lorem ipsum dolor sit amet", "action": "Lorem ipsum dolor sit amet", "more": [{ "name": "Link", "url": "#", "description": "Lorem ipsum dolor sit amet" }] } }] };
 
 /***/ }),
 /* 33 */
@@ -18082,8 +18082,11 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
       qNum: 0,
       lNum: 0,
       scoresRaw: 0,
-      catFacebook: 0,
-      catGeneral: 0,
+      catAccounts: 0,
+      catHardware: 0,
+      catBrowser: 0,
+      catAuth: 0,
+      catSocial: 0,
       qList: [],
       view: "home"
     };
@@ -18119,8 +18122,11 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
     this.setState({
       view: "results",
       scoresRaw: scoreData.scoresRaw,
-      catFacebook: scoreData.catFacebook,
-      catGeneral: scoreData.catGeneral
+      catAccounts: scoreData.catAccounts,
+      catHardware: scoreData.catHardware,
+      catBrowser: scoreData.catBrowser,
+      catAuth: scoreData.catAuth,
+      catSocial: scoreData.catSocial
     });
   }
   setLessonsView() {
@@ -57125,8 +57131,11 @@ class Questions extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component 
       qLayers: 'control',
       nextLayer: 'disabled',
       scoresRaw: 0,
-      catGeneral: 0,
-      catFacebook: 0,
+      catAccounts: 0,
+      catHardware: 0,
+      catBrowser: 0,
+      catAuth: 0,
+      catSocial: 0,
       answered: false,
       correctClasses: "btn btn-secondary btn-block text-left",
       incorrectClasses: "btn btn-secondary btn-block text-left"
@@ -57306,20 +57315,28 @@ class Results extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
       const sum = tempArray.reduce(add);
       return sum;
     }
-    const maxFacebook = maxQuestions("catFacebook");
-    const maxGeneral = maxQuestions("catGeneral");
-    const maxScore = maxFacebook + maxGeneral;
+    const maxAccounts = maxQuestions("catAccounts");
+    const maxHardware = maxQuestions("catHardware");
+    const maxBrowser = maxQuestions("catBrowser");
+    const maxAuth = maxQuestions("catAuth");
+    const maxSocial = maxQuestions("catSocial");
+    const maxScore = maxAccounts + maxHardware + maxBrowser + maxAuth + maxSocial;
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
       { className: 'results-screen' },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'h1',
         null,
-        'You got a ',
+        'Your digital security risk is ',
         this.props.passedState.scoresRaw,
-        ' out of ',
-        maxScore,
         '!'
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'p',
+        null,
+        'This is out of a maximum score of ',
+        maxScore,
+        '. A higher score indicates higher risk. A breakdown of your risk per category is below.'
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
@@ -57330,26 +57347,62 @@ class Results extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'h3',
             null,
-            'Facebook Score'
+            'Accounts Score'
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'p',
             null,
-            this.props.passedState.catFacebook,
+            this.props.passedState.catAccounts,
             ' of ',
-            maxFacebook
+            maxAccounts
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'h3',
             null,
-            'General Score'
+            'Hardware Score'
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'p',
             null,
-            this.props.passedState.catGeneral,
+            this.props.passedState.catHardware,
             ' of ',
-            maxGeneral
+            maxHardware
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'h3',
+            null,
+            'Browser Score'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'p',
+            null,
+            this.props.passedState.catBrowser,
+            ' of ',
+            maxBrowser
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'h3',
+            null,
+            'Authentication Score'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'p',
+            null,
+            this.props.passedState.catAuth,
+            ' of ',
+            maxAuth
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'h3',
+            null,
+            'Social Score'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'p',
+            null,
+            this.props.passedState.catSocial,
+            ' of ',
+            maxSocial
           )
         )
       ),
