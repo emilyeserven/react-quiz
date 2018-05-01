@@ -18075,6 +18075,26 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+const sounds = {
+  shared: {
+    volume: 1
+  },
+  players: {
+    click: {
+      sound: { src: ['/sound/click.mp3'] },
+      settings: { oneAtATime: true }
+    },
+    typing: {
+      sound: { src: ['/sound/typing.mp3'] },
+      settings: { oneAtATime: true }
+    },
+    deploy: {
+      sound: { src: ['/sound/deploy.mp3'] },
+      settings: { oneAtATime: true }
+    }
+  }
+};
+
 class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
   constructor() {
     super();
@@ -18146,35 +18166,39 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
       __WEBPACK_IMPORTED_MODULE_3_arwes__["ThemeProvider"],
       { theme: Object(__WEBPACK_IMPORTED_MODULE_3_arwes__["createTheme"])() },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_3_arwes__["Arwes"],
-        null,
+        __WEBPACK_IMPORTED_MODULE_3_arwes__["SoundsProvider"],
+        { sounds: Object(__WEBPACK_IMPORTED_MODULE_3_arwes__["createSounds"])(sounds) },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_3_arwes__["Puffs"],
+          __WEBPACK_IMPORTED_MODULE_3_arwes__["Arwes"],
           null,
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'div',
-            { style: { width: '100%', height: '90vh' } },
+            __WEBPACK_IMPORTED_MODULE_3_arwes__["Puffs"],
+            null,
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               'div',
-              { className: 'container py-3 px-3 px-md-0 my-md-5 main-frame' },
+              { style: { width: '100%', height: '90vh' } },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                __WEBPACK_IMPORTED_MODULE_3_arwes__["Frame"],
-                { level: 3, corners: 5, animate: false },
+                'div',
+                { className: 'container py-3 px-3 px-md-0 my-md-5 main-frame' },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                  'div',
-                  { className: 'py-md-5 px-md-5 px-3 py-3 frame-container' },
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__components_MainFrame_jsx__["a" /* default */], {
-                    view: this.state.view,
-                    state: this.state,
-                    setHomeView: this.setHomeView,
-                    setResultsView: this.setResultsView,
-                    setQuestionsView: this.setQuestionsView,
-                    setLessonsView: this.setLessonsView,
-                    setLessonView: this.setLessonView,
-                    lNum: this.state.lNum
-                    //updateScore={this.updateScore}
-                    , resetHomeView: this.resetHomeView
-                  })
+                  __WEBPACK_IMPORTED_MODULE_3_arwes__["Frame"],
+                  { level: 3, corners: 5, animate: true },
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'py-md-5 px-md-5 px-3 py-3 frame-container' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__components_MainFrame_jsx__["a" /* default */], {
+                      view: this.state.view,
+                      state: this.state,
+                      setHomeView: this.setHomeView,
+                      setResultsView: this.setResultsView,
+                      setQuestionsView: this.setQuestionsView,
+                      setLessonsView: this.setLessonsView,
+                      setLessonView: this.setLessonView,
+                      lNum: this.state.lNum
+                      //updateScore={this.updateScore}
+                      , resetHomeView: this.resetHomeView
+                    })
+                  )
                 )
               )
             )
@@ -57026,7 +57050,7 @@ class Home extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
             null,
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               __WEBPACK_IMPORTED_MODULE_1_arwes__["Words"],
-              null,
+              { animate: true },
               __WEBPACK_IMPORTED_MODULE_2__data_json___default.a.name
             )
           )
@@ -57043,7 +57067,7 @@ class Home extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
             null,
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               __WEBPACK_IMPORTED_MODULE_1_arwes__["Words"],
-              null,
+              { animate: true },
               __WEBPACK_IMPORTED_MODULE_2__data_json___default.a.description
             )
           )
@@ -57082,7 +57106,8 @@ class HomeButtons extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Componen
         __WEBPACK_IMPORTED_MODULE_1_arwes__["Button"],
         {
           onClick: this.props.setQuestionsView,
-          layer: 'primary' },
+          layer: 'primary',
+          animate: true },
         'Start Quiz'
       ),
       '\xA0\xA0',
@@ -57091,7 +57116,7 @@ class HomeButtons extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Componen
         {
           onClick: this.props.setLessonsView,
           layer: 'secondary',
-          role: 'button' },
+          animate: true },
         'Learn More'
       )
     );

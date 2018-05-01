@@ -2,11 +2,31 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 
-import { ThemeProvider, Arwes, Puffs, Button, createTheme, Frame } from 'arwes';
+import { ThemeProvider, SoundsProvider, createSounds, Arwes, Puffs, Button, createTheme, Frame, animate } from 'arwes';
 
 import appData from './data.json';
 
 import MainFrame from './components/MainFrame.jsx';
+
+const sounds = {
+  shared: {
+    volume: 1,
+  },
+  players: {
+    click: {
+      sound: { src: ['/sound/click.mp3'] },
+      settings: { oneAtATime: true }
+    },
+    typing: {
+      sound: { src: ['/sound/typing.mp3'] },
+      settings: { oneAtATime: true }
+    },
+    deploy: {
+      sound: { src: ['/sound/deploy.mp3'] },
+      settings: { oneAtATime: true }
+    },
+  }
+};
 
 class App extends React.Component {
   constructor() {
@@ -77,30 +97,32 @@ class App extends React.Component {
     console.log(this.state);
     return(
       <ThemeProvider theme={createTheme()}>
-        <Arwes>
-          <Puffs>
-            <div style={{ width: '100%', height: '90vh'}}>
-            <div className="container py-3 px-3 px-md-0 my-md-5 main-frame">
-              <Frame level={3} corners={5} animate={false}>
-                <div className="py-md-5 px-md-5 px-3 py-3 frame-container">
-                  <MainFrame
-                  view={this.state.view}
-                  state={this.state}
-                  setHomeView={this.setHomeView}
-                  setResultsView={this.setResultsView}
-                  setQuestionsView={this.setQuestionsView}
-                  setLessonsView={this.setLessonsView}
-                  setLessonView={this.setLessonView}
-                  lNum={this.state.lNum}
-                  //updateScore={this.updateScore}
-                  resetHomeView={this.resetHomeView}
-                  />
+        <SoundsProvider sounds={createSounds(sounds)}>
+          <Arwes>
+            <Puffs>
+              <div style={{ width: '100%', height: '90vh'}}>
+              <div className="container py-3 px-3 px-md-0 my-md-5 main-frame">
+                <Frame level={3} corners={5} animate>
+                  <div className="py-md-5 px-md-5 px-3 py-3 frame-container">
+                    <MainFrame
+                    view={this.state.view}
+                    state={this.state}
+                    setHomeView={this.setHomeView}
+                    setResultsView={this.setResultsView}
+                    setQuestionsView={this.setQuestionsView}
+                    setLessonsView={this.setLessonsView}
+                    setLessonView={this.setLessonView}
+                    lNum={this.state.lNum}
+                    //updateScore={this.updateScore}
+                    resetHomeView={this.resetHomeView}
+                    />
+                  </div>
+                </Frame>
                 </div>
-              </Frame>
               </div>
-            </div>
-          </Puffs>
-        </Arwes>
+            </Puffs>
+          </Arwes>
+        </SoundsProvider>
       </ThemeProvider>
     );
   }

@@ -13,12 +13,12 @@ class Home extends React.Component {
         <div className="container home-screen">
           <div className="row justify-content-center">
             <div className="col-12 text-center">
-              <h1><Words>{appData.name}</Words></h1>
+              <h1><Words animate>{appData.name}</Words></h1>
             </div>
           </div>
           <div className="row justify-content-start">
             <div className="col-12">
-              <p><Words>{appData.description}</Words></p>
+              <p><Words animate>{appData.description}</Words></p>
             </div>
           </div>
           <HomeButtons

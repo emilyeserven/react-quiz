@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Button } from 'arwes';
+import { Button, animate } from 'arwes';
 
 class HomeButtons extends React.Component {
     constructor(props) {
@@ -11,14 +11,15 @@ class HomeButtons extends React.Component {
         <div className="row justify-content-center">
           <Button
             onClick={this.props.setQuestionsView}
-            layer='primary'>
+            layer='primary'
+            animate>
             Start Quiz
           </Button>
           &nbsp;&nbsp;
           <Button
             onClick={this.props.setLessonsView}
             layer='secondary'
-            role="button">
+            animate>
             Learn More
           </Button>
         </div>
