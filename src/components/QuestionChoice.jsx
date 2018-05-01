@@ -18,7 +18,8 @@ class QuestionChoice extends React.Component {
             layer={layerValue}
             disabled={disabledValue}
             className="button-left"
-            style={{width: '100%'}}>
+            style={{width: '100%'}}
+            animate>
             {this.props.content}
           </Button>
         </div>

@@ -88,14 +88,16 @@ class Questions extends React.Component {
             <Button
               onClick={this.nextQuestion.bind(null, this.state.qNum)}
               layer={this.state.answered === true && Number(appData.questions.length - 1) !== this.state.qNum ? 'primary' : 'disabled'}
-              disabled={this.state.answered === true && Number(appData.questions.length - 1) !== this.state.qNum ? false : true}>
+              disabled={this.state.answered === true && Number(appData.questions.length - 1) !== this.state.qNum ? false : true}
+              animate>
               Next Question
             </Button>
             &nbsp;&nbsp;
             <Button
               onClick={() => this.props.setResultsView(this.state)}
               layer={this.state.answered === true && Number(appData.questions.length - 1) === this.state.qNum ? 'primary' : 'disabled'}
-              disabled={this.state.answered === true && Number(appData.questions.length - 1) === this.state.qNum ? false : true}>
+              disabled={this.state.answered === true && Number(appData.questions.length - 1) === this.state.qNum ? false : true}
+              animate>
               Results
             </Button>
           </div>

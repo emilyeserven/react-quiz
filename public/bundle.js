@@ -18182,7 +18182,7 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                 { className: 'container py-3 px-3 px-md-0 my-md-5 main-frame' },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                   __WEBPACK_IMPORTED_MODULE_3_arwes__["Frame"],
-                  { level: 3, corners: 5, animate: true },
+                  { level: 3, corners: 5 },
                   __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'div',
                     { className: 'py-md-5 px-md-5 px-3 py-3 frame-container' },
@@ -57242,7 +57242,8 @@ class Questions extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component 
           {
             onClick: this.nextQuestion.bind(null, this.state.qNum),
             layer: this.state.answered === true && Number(__WEBPACK_IMPORTED_MODULE_2__data_json___default.a.questions.length - 1) !== this.state.qNum ? 'primary' : 'disabled',
-            disabled: this.state.answered === true && Number(__WEBPACK_IMPORTED_MODULE_2__data_json___default.a.questions.length - 1) !== this.state.qNum ? false : true },
+            disabled: this.state.answered === true && Number(__WEBPACK_IMPORTED_MODULE_2__data_json___default.a.questions.length - 1) !== this.state.qNum ? false : true,
+            animate: true },
           'Next Question'
         ),
         '\xA0\xA0',
@@ -57251,7 +57252,8 @@ class Questions extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component 
           {
             onClick: () => this.props.setResultsView(this.state),
             layer: this.state.answered === true && Number(__WEBPACK_IMPORTED_MODULE_2__data_json___default.a.questions.length - 1) === this.state.qNum ? 'primary' : 'disabled',
-            disabled: this.state.answered === true && Number(__WEBPACK_IMPORTED_MODULE_2__data_json___default.a.questions.length - 1) === this.state.qNum ? false : true },
+            disabled: this.state.answered === true && Number(__WEBPACK_IMPORTED_MODULE_2__data_json___default.a.questions.length - 1) === this.state.qNum ? false : true,
+            animate: true },
           'Results'
         )
       )
@@ -57294,7 +57296,8 @@ class QuestionChoice extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Compo
           layer: layerValue,
           disabled: disabledValue,
           className: 'button-left',
-          style: { width: '100%' } },
+          style: { width: '100%' },
+          animate: true },
         this.props.content
       )
     );
@@ -57489,7 +57492,8 @@ class Lessons extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
         {
           onClick: () => this.props.setLessonView(index),
           key: index,
-          className: 'text-left fullwidth mb-2' },
+          className: 'text-left fullwidth mb-2',
+          animate: true },
         item.title
       )),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -57497,7 +57501,7 @@ class Lessons extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
         { className: 'row mt-3 justify-content-center' },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           __WEBPACK_IMPORTED_MODULE_2_arwes__["Button"],
-          { onClick: this.props.setHomeView, layer: 'secondary' },
+          { onClick: this.props.setHomeView, layer: 'secondary', animate: true },
           'Back to Home'
         )
       )

@@ -102,7 +102,7 @@ class App extends React.Component {
             <Puffs>
               <div style={{ width: '100%', height: '90vh'}}>
               <div className="container py-3 px-3 px-md-0 my-md-5 main-frame">
-                <Frame level={3} corners={5} animate>
+                <Frame level={3} corners={5}>
                   <div className="py-md-5 px-md-5 px-3 py-3 frame-container">
                     <MainFrame
                     view={this.state.view}

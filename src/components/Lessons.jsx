@@ -18,13 +18,14 @@ class Lessons extends React.Component {
               <Button
               onClick={() => this.props.setLessonView(index)}
               key={index}
-              className="text-left fullwidth mb-2">
+              className="text-left fullwidth mb-2"
+              animate>
                 {item.title}
               </Button>
             ))
           }
           <div className="row mt-3 justify-content-center">
-            <Button onClick={this.props.setHomeView} layer='secondary'>Back to Home</Button>
+            <Button onClick={this.props.setHomeView} layer='secondary' animate>Back to Home</Button>
           </div>
         </div>
       );
