@@ -14,15 +14,15 @@ const sounds = {
   },
   players: {
     click: {
-      sound: { src: ['/sound/click.mp3'] },
+      sound: { src: ['./sound/click.mp3'] },
       settings: { oneAtATime: true }
     },
     typing: {
-      sound: { src: ['/sound/typing.mp3'] },
+      sound: { src: ['./sound/typing.mp3'] },
       settings: { oneAtATime: true }
     },
     deploy: {
-      sound: { src: ['/sound/deploy.mp3'] },
+      sound: { src: ['./sound/deploy.mp3'] },
       settings: { oneAtATime: true }
     },
   }
